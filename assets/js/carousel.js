@@ -117,15 +117,6 @@
       img.loading = i === 0 ? 'eager' : 'lazy';
       slide.appendChild(img);
 
-      const shade = document.createElement('div');
-      shade.className = 'carousel-shade';
-      slide.appendChild(shade);
-
-      const counter = document.createElement('span');
-      counter.className = 'carousel-counter';
-      counter.textContent = (i + 1) + ' / ' + images.length;
-      slide.appendChild(counter);
-
       track.appendChild(slide);
 
       const dot = document.createElement('button');
@@ -145,12 +136,26 @@
     let timer = null;
 
     const dots = Array.from(dotsBox.children);
+    const slides = Array.from(track.children);
+    const viewport = track.parentElement;
 
     function go(index) {
       current = (index + total) % total;
-      track.style.transform = 'translateX(' + (-current * 100) + '%)';
+      const slideEl = slides[current];
+      if (slideEl) {
+        const offset = slideEl.offsetLeft - (viewport.clientWidth - slideEl.offsetWidth) / 2;
+        track.style.transform = 'translateX(' + (-offset) + 'px)';
+      }
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
+
+    window.addEventListener('resize', () => go(current));
+
+    // Posiciona o primeiro slide sem animação de entrada.
+    track.style.transition = 'none';
+    go(0);
+    track.offsetHeight; // force reflow
+    track.style.transition = '';
 
     const next = () => go(current + 1);
     const prev = () => go(current - 1);
