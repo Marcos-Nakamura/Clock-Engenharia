@@ -792,10 +792,10 @@ section { padding: 5rem 0; position: relative; }
   .servico-detail-section.reverse .servico-detail-grid {
     grid-template-columns: 1fr;
   }
-  .servico-detail-section.reverse .servico-detail-media,
-  .servico-detail-section.reverse .servico-detail-text,
   .servico-detail-media,
-  .servico-detail-text { order: initial; }
+  .servico-detail-section.reverse .servico-detail-media { order: 2; }
+  .servico-detail-text,
+  .servico-detail-section.reverse .servico-detail-text { order: 1; }
   .servico-detail-text,
   .servico-detail-section.reverse .servico-detail-text {
     padding: 3rem 1.5rem;
@@ -915,6 +915,8 @@ section { padding: 5rem 0; position: relative; }
     padding: 3rem 1.5rem;
   }
   .diferencial-media { min-height: 320px; }
+  .diferencial-grid--reverse .diferencial-media { order: 2; }
+  .diferencial-grid--reverse .diferencial-text { order: 1; }
   .servicos-grid { grid-template-columns: 1fr 1fr; }
   .servicos-header { flex-wrap: wrap; }
   .carousel { padding: 0 3rem; }
@@ -976,7 +978,6 @@ section { padding: 5rem 0; position: relative; }
   .diferencial-grid--reverse {
     grid-template-columns: 1fr;
   }
-  .diferencial-block--foco .diferencial-media { order: -1; }
   .sobre-section { min-height: 70vh; }
   .sobre-bg { background-attachment: scroll; }
   .sobre-text .section-title { font-size: 2rem; }
