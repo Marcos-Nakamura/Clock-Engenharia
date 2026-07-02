@@ -19,15 +19,14 @@ document.addEventListener('DOMContentLoaded', function () {
     onScroll();
   }
 
-  /* ── Mobile menu ───────────────────────────────────── */
+  /* ── Mobile menu (dropdown) ─────────────────────────── */
   const toggle = document.getElementById('menu-toggle');
   const nav    = document.getElementById('main-nav');
 
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
+    const setOpen = (open) => {
+      nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open);
-      document.body.style.overflow = open ? 'hidden' : '';
 
       // Animação das barras → X
       const bars = toggle.querySelectorAll('span');
@@ -38,16 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         bars.forEach(b => b.removeAttribute('style'));
       }
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(!nav.classList.contains('open'));
     });
 
     // Fechar ao clicar em link
     nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', false);
-        document.body.style.overflow = '';
-        toggle.querySelectorAll('span').forEach(b => b.removeAttribute('style'));
-      });
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    // Fechar ao clicar fora do dropdown
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        setOpen(false);
+      }
+    });
+
+    // Fechar com Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false);
     });
   }
 
