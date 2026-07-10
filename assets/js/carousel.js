@@ -233,7 +233,10 @@
     });
 
     // Autoplay
-    function start() { timer = window.setInterval(next, AUTOPLAY_MS); }
+    // start() é idempotente: limpa qualquer timer anterior antes de criar um
+    // novo. Assim nunca acumula dois autoplays e qualquer chamada reinicia a
+    // contagem do zero — é o "reset" acionado após um movimento manual.
+    function start() { stop(); timer = window.setInterval(next, AUTOPLAY_MS); }
     function stop()  { if (timer) { clearInterval(timer); timer = null; } }
     function restart() { stop(); start(); }
 
@@ -253,7 +256,8 @@
     track.addEventListener('touchend', (e) => {
       const dx = e.changedTouches[0].clientX - startX;
       if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
-      start();
+      // Movimento manual por swipe: reinicia o timer do zero, como as setas.
+      restart();
     }, { passive: true });
 
     // Só um slide? Esconde controles.
