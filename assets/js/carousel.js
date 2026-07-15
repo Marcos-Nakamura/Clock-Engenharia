@@ -1,10 +1,10 @@
 /**
- * Nexa Engenharia — carousel.js
+ * Clock Engenharia — carousel.js
  * Carrossel que carrega AUTOMATICAMENTE todas as fotos da pasta
  * assets/carrossel/.
  *
  * Como ele descobre as imagens (nesta ordem):
- *   1. window.NEXA_GALLERY_IMAGES — definida em assets/carrossel/images.js,
+ *   1. window.CLOCK_GALLERY_IMAGES — definida em assets/carrossel/images.js,
  *      incluída como <script> normal no index.html. Esta é a fonte principal:
  *      funciona sempre, inclusive abrindo o index.html direto no navegador
  *      (file://), onde chamadas fetch() para arquivos locais são bloqueadas
@@ -55,8 +55,8 @@
     // 1) Fonte principal: lista embutida via <script> (sempre disponível,
     //    inclusive em file://).
     const inline = dedupeSort(
-      Array.isArray(window.NEXA_GALLERY_IMAGES)
-        ? window.NEXA_GALLERY_IMAGES.filter(n => typeof n === 'string' && IMAGE_RE.test(n))
+      Array.isArray(window.CLOCK_GALLERY_IMAGES)
+        ? window.CLOCK_GALLERY_IMAGES.filter(n => typeof n === 'string' && IMAGE_RE.test(n))
         : []
     );
     if (inline.length) return inline;
@@ -120,7 +120,7 @@
 
     const img = document.createElement('img');
     img.src = FOLDER + encodeURIComponent(name);
-    img.alt = 'Projeto Nexa Engenharia ' + (i + 1);
+    img.alt = 'Projeto Clock Engenharia ' + (i + 1);
     img.loading = (!isClone && name === INITIAL_IMAGE) ? 'eager' : 'lazy';
     slide.appendChild(img);
     return slide;

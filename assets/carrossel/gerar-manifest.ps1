@@ -31,7 +31,7 @@ $jsContent = @"
  * Para atualizar depois de adicionar/remover fotos nesta pasta, rode:
  *   powershell -ExecutionPolicy Bypass -File gerar-manifest.ps1
  */
-window.NEXA_GALLERY_IMAGES = [
+window.CLOCK_GALLERY_IMAGES = [
 $jsItems
 ];
 "@

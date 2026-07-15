@@ -1,5 +1,5 @@
 /* =============================================
-   NEXA ENGENHARIA — Site estático (HTML/CSS/JS)
+   CLOCK ENGENHARIA — Site estático (HTML/CSS/JS)
    Design original — engenharia de alta performance.
    ============================================= */
 
@@ -11,24 +11,24 @@
 }
 
 :root {
-  --nexa-primary:       #000000;   /* Preto — textos gerais, overlays */
-  --nexa-primary-light: #2A2A2A;
-  --nexa-blue-vivid:    #1D67CD;   /* Azul do ícone do WhatsApp flutuante */
-  --nexa-blue-light:    #B3CFE5;   /* Azul claro — fundo seção Foco / Obras Comerciais */
-  --nexa-accent:        #FDCB0A;   /* Amarelo/dourado — títulos, CTAs */
-  --nexa-accent-light:  #FDD949;
-  --nexa-accent-dark:   #E0B300;
-  --nexa-light:         #F7F7F7;   /* Fundo geral da página */
-  --nexa-gray:          #333333;
-  --nexa-dark:          #000000;
-  --nexa-white:         #FFFFFF;
-  --nexa-header-bg:     #FEFEFE;
-  --nexa-border:        #E5E5E5;
-  --nexa-nav-inactive:  #6E6E6E;   /* Cinza — aba de menu não ativa no header */
+  --clock-primary:       #000000;   /* Preto — textos gerais, overlays */
+  --clock-primary-light: #2A2A2A;
+  --clock-blue-vivid:    #1D67CD;   /* Azul do ícone do WhatsApp flutuante */
+  --clock-blue-light:    #B3CFE5;   /* Azul claro — fundo seção Foco / Obras Comerciais */
+  --clock-accent:        #FDCB0A;   /* Amarelo/dourado — títulos, CTAs */
+  --clock-accent-light:  #FDD949;
+  --clock-accent-dark:   #E0B300;
+  --clock-light:         #F7F7F7;   /* Fundo geral da página */
+  --clock-gray:          #333333;
+  --clock-dark:          #000000;
+  --clock-white:         #FFFFFF;
+  --clock-header-bg:     #FEFEFE;
+  --clock-border:        #E5E5E5;
+  --clock-nav-inactive:  #6E6E6E;   /* Cinza — aba de menu não ativa no header */
 
-  --gradient-accent: linear-gradient(135deg, var(--nexa-accent-light) 0%, var(--nexa-accent) 55%, var(--nexa-accent-dark) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--clock-accent-light) 0%, var(--clock-accent) 55%, var(--clock-accent-dark) 100%);
   --gradient-dark:   linear-gradient(160deg, #111111 0%, #000000 100%);
-  --gradient-blue:   linear-gradient(135deg, var(--nexa-blue-light) 0%, var(--nexa-blue-vivid) 100%);
+  --gradient-blue:   linear-gradient(135deg, var(--clock-blue-light) 0%, var(--clock-blue-vivid) 100%);
 
   --font-display: 'Roboto', sans-serif;
   --font-body:    'Nunito Sans', sans-serif;
@@ -50,8 +50,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--nexa-primary);
-  background: var(--nexa-white);
+  color: var(--clock-primary);
+  background: var(--clock-white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -71,21 +71,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.02em;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
 }
 
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
 h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
 
-p { margin-bottom: 1rem; color: var(--nexa-gray); }
+p { margin-bottom: 1rem; color: var(--clock-gray); }
 
 a {
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
   text-decoration: none;
   transition: color var(--transition);
 }
-a:hover { color: var(--nexa-accent-dark); }
+a:hover { color: var(--clock-accent-dark); }
 
 img { max-width: 100%; height: auto; display: block; }
 
@@ -120,26 +120,26 @@ section { padding: 5rem 0; position: relative; }
 
 .btn-primary {
   background: var(--gradient-accent);
-  color: var(--nexa-primary);
-  border-color: var(--nexa-accent);
+  color: var(--clock-primary);
+  border-color: var(--clock-accent);
   box-shadow: 0 4px 16px rgba(237,115,24,0.25);
 }
 .btn-primary:hover {
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   transform: translateY(-3px);
   box-shadow: var(--shadow-accent);
 }
 
 .btn-outline {
   background: rgba(255,255,255,0.04);
-  color: var(--nexa-white);
+  color: var(--clock-white);
   border-color: rgba(255,255,255,0.5);
   backdrop-filter: blur(4px);
 }
 .btn-outline:hover {
-  background: var(--nexa-white);
-  color: var(--nexa-primary);
-  border-color: var(--nexa-white);
+  background: var(--clock-white);
+  color: var(--clock-primary);
+  border-color: var(--clock-white);
 }
 .btn-outline:hover svg { transform: translateX(4px); }
 
@@ -197,12 +197,12 @@ body:not(.page-home) #site-header {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   letter-spacing: 0.08em;
 }
 
 .site-logo .logo-text span {
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
 }
 
 .main-nav ul {
@@ -222,7 +222,7 @@ body:not(.page-home) #site-header {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--nexa-white);
+  color: var(--clock-white);
   background: transparent;
   padding: 0.4rem 0.05rem;
   transition: color 0.35s ease;
@@ -235,7 +235,7 @@ body:not(.page-home) #site-header {
   right: 0;
   bottom: -4px;
   height: 2px;
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -248,26 +248,26 @@ body:not(.page-home) #site-header {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
 }
 
 /* Header sólido (rolado ou fora da home): texto do menu em tom escuro
    para manter contraste sobre o fundo branco. */
 #site-header.scrolled .main-nav a,
 body:not(.page-home) .main-nav a {
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
 }
 #site-header.scrolled .main-nav a:hover,
 #site-header.scrolled .main-nav a.active,
 body:not(.page-home) .main-nav a:hover,
 body:not(.page-home) .main-nav a.active {
-  color: var(--nexa-accent-dark);
+  color: var(--clock-accent-dark);
 }
 
 /* Botão de contato (WhatsApp) — mesmo box do menu, aparência de pílula */
 .main-nav a.nav-cta {
   padding: 0.6rem 1.4rem;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   background: #ffd400;
   border-radius: 999px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
@@ -283,7 +283,7 @@ body:not(.page-home) .main-nav a.active {
 #site-header.scrolled .main-nav a.nav-cta:hover,
 body:not(.page-home) .main-nav a.nav-cta,
 body:not(.page-home) .main-nav a.nav-cta:hover {
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
 }
 
 .main-nav a.nav-cta:hover {
@@ -299,7 +299,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   gap: 5px;
   cursor: pointer;
   padding: 12px;
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
   border: none;
   border-radius: 999px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.16);
@@ -308,7 +308,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--nexa-primary);
+  background: var(--clock-primary);
   transition: all var(--transition);
 }
 
@@ -353,7 +353,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 
 .hero-title {
-  color: var(--nexa-white);
+  color: var(--clock-white);
   margin-bottom: 2rem;
   font-size: 60px;
   font-weight: 700;
@@ -370,7 +370,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   height: 68px;
   background: rgba(0,0,0,0.5);
   border: 0.8px solid #FFFFFF;
-  color: var(--nexa-white);
+  color: var(--clock-white);
   font-family: var(--font-body);
   font-size: 22px;
   font-weight: 700;
@@ -378,8 +378,8 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 .hero-btn:hover {
   background: rgba(0,0,0,0.75);
-  border-color: var(--nexa-accent);
-  color: var(--nexa-white);
+  border-color: var(--clock-accent);
+  color: var(--clock-white);
 }
 
 /* --- Section Headers --- */
@@ -393,7 +393,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   font-family: var(--font-body);
   font-size: 1.375rem;
   font-weight: 700;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   margin-bottom: 0.75rem;
 }
 
@@ -409,13 +409,13 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 /* --- Diferenciais --- */
 .diferenciais-header {
-  background: var(--nexa-light);
+  background: var(--clock-light);
   padding: 3.5rem 0;
 }
-.diferenciais-header .section-title { color: var(--nexa-accent); }
+.diferenciais-header .section-title { color: var(--clock-accent); }
 
 .diferencial-block {
-  background: var(--nexa-light);
+  background: var(--clock-light);
   padding: 0;
 }
 .diferencial-grid {
@@ -440,7 +440,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   position: relative;
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   padding-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -451,7 +451,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   left: 0;
   width: 32px;
   height: 2px;
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
 }
 
 .diferencial-item {
@@ -467,21 +467,21 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   left: 0;
   top: 0;
   font-weight: 700;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
 }
 
 .diferencial-item strong {
   display: block;
   font-size: 1rem;
   font-weight: 700;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   margin-bottom: 0.35rem;
 }
 
 .diferencial-item p {
   font-size: 1rem;
   line-height: 1.9;
-  color: var(--nexa-primary);
+  color: var(--clock-primary);
   margin-bottom: 0;
 }
 
@@ -536,7 +536,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 
 .sobre-text .section-title {
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
   font-weight: 700;
   font-size: 2.75rem;
   letter-spacing: 0.02em;
@@ -552,7 +552,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 /* --- Serviços --- */
 .servicos-section {
-  background: var(--nexa-light);
+  background: var(--clock-light);
 }
 
 .servicos-header {
@@ -563,7 +563,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   margin-bottom: 3.5rem;
 }
 .servicos-header-text { max-width: 640px; }
-.servicos-header .section-title { color: var(--nexa-blue-vivid); }
+.servicos-header .section-title { color: var(--clock-blue-vivid); }
 
 .btn-leiamais {
   display: inline-flex;
@@ -572,8 +572,8 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   flex-shrink: 0;
   width: 200px;
   height: 60px;
-  background: var(--nexa-accent);
-  border: 0.8px solid var(--nexa-accent);
+  background: var(--clock-accent);
+  border: 0.8px solid var(--clock-accent);
   color: #000000;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -581,8 +581,8 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   transition: border-color 0.4s, background-color 0.4s;
 }
 .btn-leiamais:hover {
-  background: var(--nexa-accent-dark);
-  border-color: var(--nexa-accent-dark);
+  background: var(--clock-accent-dark);
+  border-color: var(--clock-accent-dark);
   color: #000000;
 }
 
@@ -597,7 +597,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  background: var(--nexa-white);
+  background: var(--clock-white);
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   transition: transform var(--transition), box-shadow var(--transition);
@@ -611,7 +611,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   display: block;
   width: 56px;
   height: 56px;
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
 }
 .servico-icon svg { width: 100%; height: 100%; }
 
@@ -623,29 +623,29 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   line-height: 1.4;
   transition: color var(--transition);
 }
-.servico-card:hover .servico-nome { color: var(--nexa-accent-dark); }
+.servico-card:hover .servico-nome { color: var(--clock-accent-dark); }
 
 /* Resumo curto dentro do card (usado no resumo de Diferenciais na home) */
 .servico-desc {
   font-family: var(--font-body);
   font-size: 0.98rem;
   font-weight: 400;
-  color: var(--nexa-gray);
+  color: var(--clock-gray);
   line-height: 1.7;
   margin-top: -0.4rem;
 }
 
 /* O resumo de Diferenciais reaproveita o layout de Serviços, mas mantém
    o título em amarelo/dourado como era na seção original. */
-.diferenciais-summary .section-title { color: var(--nexa-accent); }
+.diferenciais-summary .section-title { color: var(--clock-accent); }
 
 /* --- Galeria (seção) --- */
 .galeria-section {
-  background: var(--nexa-light);
+  background: var(--clock-light);
   padding: 5rem 0;
 }
 
-.galeria-section .section-title { color: var(--nexa-accent); }
+.galeria-section .section-title { color: var(--clock-accent); }
 
 /* =============================================
    CARROSSEL
@@ -742,9 +742,9 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   transition: all var(--transition);
 }
 .carousel-btn:hover {
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
   color: #000000;
-  border-color: var(--nexa-accent);
+  border-color: var(--clock-accent);
 }
 .carousel-btn svg { width: 24px; height: 24px; }
 .carousel-btn--prev { left: 0.5rem; }
@@ -771,7 +771,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 .carousel-dot:hover { background: rgba(0,0,0,0.4); }
 .carousel-dot.active {
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
   transform: scale(1.3);
 }
 
@@ -791,7 +791,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   min-height: 425px;
   display: flex;
   align-items: center;
-  background: var(--nexa-light);
+  background: var(--clock-light);
   padding: 3rem 0;
 }
 .page-hero .section-title { color: #000000; max-width: 720px; }
@@ -803,7 +803,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   margin-top: 1rem;
 }
 
-.servico-detail-section { background: var(--nexa-light); padding: 0; }
+.servico-detail-section { background: var(--clock-light); padding: 0; }
 
 .servico-detail-grid {
   display: grid;
@@ -842,7 +842,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 900;
-  color: var(--nexa-border);
+  color: var(--clock-border);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -859,7 +859,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   left: 0;
   width: 32px;
   height: 2px;
-  background: var(--nexa-accent);
+  background: var(--clock-accent);
 }
 
 .servico-detail-text p { font-size: 1rem; line-height: 1.75; }
@@ -876,12 +876,12 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   gap: 0.6rem;
   align-items: flex-start;
   font-size: 0.92rem;
-  color: var(--nexa-gray);
+  color: var(--clock-gray);
   line-height: 1.5;
 }
 .servico-detail-list li::before {
   content: '▸';
-  color: var(--nexa-accent);
+  color: var(--clock-accent);
   font-size: 0.85rem;
   margin-top: 0.1rem;
   flex-shrink: 0;
@@ -890,20 +890,22 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 /* Outras soluções */
 .outras-solucoes {
   background: var(--gradient-dark);
-  color: var(--nexa-white);
+  color: var(--clock-white);
 }
-.outras-solucoes .section-tag { color: var(--nexa-accent); }
-.outras-solucoes .section-title { color: var(--nexa-white); }
+.outras-solucoes .section-tag { color: var(--clock-accent); }
+.outras-solucoes .section-title { color: var(--clock-white); }
 .outras-solucoes .section-subtitle { color: rgba(255,255,255,0.65); }
 
 .outras-solucoes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 3rem;
 }
 
 .outras-solucoes-item {
+  flex: 1 1 260px;
   display: flex;
   gap: 0.85rem;
   align-items: flex-start;
@@ -920,7 +922,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 .outras-solucoes-item svg {
   width: 20px;
   height: 20px;
-  stroke: var(--nexa-accent);
+  stroke: var(--clock-accent);
   fill: none;
   stroke-width: 1.8;
   flex-shrink: 0;
@@ -934,11 +936,11 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 /* CTA final da página de serviços */
 .final-cta-section {
-  background: var(--nexa-primary);
+  background: var(--clock-primary);
   padding: 5rem 0;
 }
-.final-cta-section .section-tag { color: var(--nexa-accent); }
-.final-cta-section h2 { color: var(--nexa-white); }
+.final-cta-section .section-tag { color: var(--clock-accent); }
+.final-cta-section h2 { color: var(--clock-white); }
 .final-cta-section p {
   color: rgba(255,255,255,0.7);
   max-width: 520px;
@@ -963,7 +965,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 /* --- Contato / Footer --- */
 .contato-section {
-  background: var(--nexa-light);
+  background: var(--clock-light);
   padding: 4rem 0;
   border-top: 1px solid rgba(0,0,0,0.12);
 }
@@ -1005,7 +1007,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   line-height: 1.9;
   transition: color var(--transition);
 }
-.contato-col-links a:hover { color: var(--nexa-accent-dark); }
+.contato-col-links a:hover { color: var(--clock-accent-dark); }
 
 /* --- Botão flutuante do WhatsApp --- */
 .whatsapp-float {
@@ -1034,8 +1036,8 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 /* --- Site Footer --- */
 #site-footer {
-  background: var(--nexa-light);
-  padding: 0 0 1.5rem;
+  background: var(--clock-light);
+  padding: 0 0 0.75rem;
 }
 
 .footer-inner {
@@ -1055,7 +1057,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 
 .footer-inner a { transition: color var(--transition); }
-.footer-inner a:hover { color: var(--nexa-accent-dark); }
+.footer-inner a:hover { color: var(--clock-accent-dark); }
 
 /* --- Animações de entrada (controladas via main.js) --- */
 .diferencial-card, .servico-card, .sobre-grid, .hero-content {
@@ -1093,7 +1095,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   .main-nav.open a.nav-cta {
     justify-content: center;
     margin-top: 0.4rem;
-    color: var(--nexa-primary);
+    color: var(--clock-primary);
     background: #ffd400;
   }
   .main-nav.open a.nav-cta:hover { background: #ffdd33; }
@@ -1104,7 +1106,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
     top: calc(100% + 0.75rem);
     right: 0;
     min-width: 200px;
-    background: var(--nexa-white);
+    background: var(--clock-white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     padding: 0.75rem;
@@ -1126,13 +1128,13 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
     justify-content: flex-start;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--nexa-primary);
+    color: var(--clock-primary);
     padding: 0.75rem 1rem;
     border-radius: var(--radius);
     background: transparent;
   }
-  .main-nav.open a:hover { background: var(--nexa-light); }
-  .main-nav.open a.active { color: var(--nexa-accent); background: var(--nexa-light); }
+  .main-nav.open a:hover { background: var(--clock-light); }
+  .main-nav.open a.active { color: var(--clock-accent); background: var(--clock-light); }
 
   @keyframes navDropdownIn {
     from { opacity: 0; transform: translateY(-6px); }

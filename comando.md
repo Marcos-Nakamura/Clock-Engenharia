@@ -3,7 +3,7 @@ Aqui está o documento Markdown **completo e íntegro**. Basta selecionar tudo a
 ---
 
 ````markdown
-# Especificações de Design — NEXA Engenharia (Site Wix)
+# Especificações de Design — CLOCK Engenharia (Site Wix)
 
 > Valores extraídos via DevTools / JavaScript (`getComputedStyle`) no modo preview do editor Wix.  
 > Viewport de referência desktop: **1115px** de largura.  
@@ -81,7 +81,7 @@ Aqui está o documento Markdown **completo e íntegro**. Basta selecionar tudo a
 | Contexto | Arquivo | URL original | Dimensões renderizadas |
 |---|---|---|---|
 | Logo no header | `e2fca5_8d4b4462838b4f2b851481573118e9d0~mv2.jpeg` | `https://static.wixstatic.com/media/e2fca5_8d4b4462838b4f2b851481573118e9d0~mv2.jpeg` | 121 × 107 px (crop x=0,y=42,w=713,h=629) |
-| Descrição | Logotipo NEXA Engenharia: prédios estilizados em azul, seta laranja diagonal, texto "NEXA ENGENHARIA" | — | — |
+| Descrição | Logotipo CLOCK Engenharia: prédios estilizados em azul, seta laranja diagonal, texto "CLOCK ENGENHARIA" | — | — |
 
 ### 7. COMPORTAMENTO AO ROLAR
 - `position: sticky` — fica fixo ao topo durante o scroll

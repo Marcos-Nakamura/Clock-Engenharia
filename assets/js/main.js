@@ -1,5 +1,5 @@
 /**
- * Nexa Engenharia — main.js
+ * Clock Engenharia — main.js
  * Header scroll + mobile menu + scroll suave + animações de entrada
  */
 
