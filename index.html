@@ -6,6 +6,26 @@
   <title>Clock Engenharia — Obras Comerciais e Industriais</title>
   <meta name="description" content="Clock Engenharia — Especializada em obras comerciais e industriais de alta complexidade, com foco em prazo e qualidade.">
 
+  <!-- ═══ Google Analytics 4 + Consent Mode v2 (LGPD) ═══
+       TROQUE os dois G-XXXXXXXXXX abaixo pelo seu Measurement ID do GA4.
+       Passo a passo em Adicionar/instalacao-google-analytics.md -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    /* Por padrão nada é coletado até o visitante aceitar no banner de cookies */
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,9 +316,9 @@
 <footer id="site-footer">
   <div class="container">
     <div class="footer-inner">
-      <a href="#">Política de Cookies</a>
+      <a href="politica-de-privacidade.html#cookies">Política de Cookies</a>
       <span class="footer-sep">|</span>
-      <a href="#">Política de Privacidade</a>
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
       <span class="footer-sep">|</span>
       <p class="footer-copy">&copy; <span id="footer-year">2026</span> Clock Engenharia</p>
     </div>
@@ -315,6 +335,7 @@
 <script src="assets/carrossel/images.js"></script>
 <script src="assets/js/carousel.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/cookie-consent.js" defer></script>
 
 </body>
 </html>
