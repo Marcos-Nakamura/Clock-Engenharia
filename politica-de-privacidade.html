@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon (logo da Clock) -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
   <title>Política de Privacidade e Cookies — Clock Engenharia</title>
   <meta name="description" content="Política de Privacidade e de Cookies da Clock Engenharia: como coletamos, usamos e protegemos seus dados, em conformidade com a LGPD.">
 
   <!-- ═══ Google Analytics 4 + Consent Mode v2 (LGPD) ═══
-       TROQUE os dois G-XXXXXXXXXX abaixo pelo seu Measurement ID do GA4.
-       Passo a passo em Adicionar/instalacao-google-analytics.md -->
+       Measurement ID do GA4: G-QL83E8YFLQ (fluxo Web da propriedade da Clock). -->
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -20,10 +24,19 @@
       'ad_personalization': 'denied'
     });
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QL83E8YFLQ"></script>
   <script>
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-QL83E8YFLQ');
+  </script>
+
+  <!-- ═══ Google Ads (gtag.js) ═══
+       Reaproveita o gtag() e o Consent Mode definidos acima: os cookies de
+       anúncio (ad_storage / ad_user_data / ad_personalization) só disparam
+       depois que o visitante clica "Aceitar" no banner (assets/js/cookie-consent.js). -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18353408222"></script>
+  <script>
+    gtag('config', 'AW-18353408222');
   </script>
 
   <!-- Google Fonts -->
@@ -107,6 +120,9 @@
             meio do Google Analytics, apenas se você aceitar os cookies (ex.: páginas
             visitadas, tempo de permanência, tipo de dispositivo, origem do acesso e região
             aproximada).</li>
+          <li><strong>Dados de publicidade</strong> — se você aceitar os cookies, o Google Ads
+            pode usar identificadores para medir a eficácia dos nossos anúncios (conversões) e
+            exibir anúncios relevantes da Clock Engenharia em outros sites (remarketing).</li>
           <li><strong>Dados que você nos envia voluntariamente</strong> — quando entra em
             contato pelo WhatsApp, telefone ou e-mail (ex.: nome e informações sobre a obra
             ou serviço desejado).</li>
@@ -123,18 +139,20 @@
           <li>Aprimorar nossos conteúdos e serviços.</li>
         </ul>
 
-        <h2 id="cookies">4. Cookies e Google Analytics</h2>
+        <h2 id="cookies">4. Cookies, Google Analytics e Google Ads</h2>
         <p>
           Cookies são pequenos arquivos que o site pode armazenar no seu navegador. Utilizamos
-          apenas <strong>cookies de análise</strong>, por meio do Google Analytics 4 (GA4),
-          para entender de maneira estatística e anônima como o site é usado.
+          dois tipos: <strong>cookies de análise</strong>, por meio do Google Analytics 4 (GA4),
+          para entender de maneira estatística e anônima como o site é usado; e
+          <strong>cookies de publicidade</strong>, por meio do Google Ads, para medir conversões
+          de campanhas e exibir anúncios relevantes (remarketing).
         </p>
         <p>
           Esses cookies só são ativados <strong>após o seu consentimento</strong>. Ao abrir o
           site, um banner permite <strong>Aceitar</strong> ou <strong>Recusar</strong>. Enquanto
-          você não decide — ou se recusar — nenhum dado de análise é coletado, graças ao
-          <em>Google Consent Mode v2</em>. Cookies estritamente necessários ao funcionamento
-          básico da página não exigem consentimento.
+          você não decide — ou se recusar — nenhum cookie de análise ou de publicidade é
+          ativado, graças ao <em>Google Consent Mode v2</em>. Cookies estritamente necessários
+          ao funcionamento básico da página não exigem consentimento.
         </p>
         <p>
           Você pode, a qualquer momento, revogar sua escolha: limpe os cookies e os dados do
@@ -146,8 +164,8 @@
 
         <h2>5. Base legal (LGPD)</h2>
         <p>
-          O tratamento de dados de navegação por cookies de análise ocorre com base no seu
-          <strong>consentimento</strong> (art. 7º, I, da LGPD). O tratamento de dados enviados
+          O tratamento de dados de navegação por cookies de análise e de publicidade ocorre com
+          base no seu <strong>consentimento</strong> (art. 7º, I, da LGPD). O tratamento de dados enviados
           em um contato ocorre para atender à sua solicitação e por legítimo interesse na
           prestação do serviço.
         </p>
@@ -158,15 +176,16 @@
           <li>Confirmar a existência de tratamento e acessar seus dados;</li>
           <li>Corrigir dados incompletos ou desatualizados;</li>
           <li>Solicitar a anonimização, o bloqueio ou a eliminação de dados;</li>
-          <li>Revogar o consentimento dado para os cookies de análise.</li>
+          <li>Revogar o consentimento dado para os cookies de análise e de publicidade.</li>
         </ul>
         <p>Para exercer esses direitos, utilize os canais de contato abaixo.</p>
 
         <h2>7. Compartilhamento com terceiros</h2>
         <p>
-          Os dados de navegação anônimos são processados pelo <strong>Google Analytics</strong>
-          (Google LLC), que atua como operador desses dados. Não compartilhamos suas informações
-          com nenhuma outra empresa para fins de marketing.
+          Os dados de navegação anônimos são processados pelo <strong>Google Analytics</strong> e
+          pelo <strong>Google Ads</strong> (Google LLC), que atuam como operadores desses dados —
+          o Google Ads apenas para medição de conversões e remarketing das nossas próprias
+          campanhas. Não vendemos nem compartilhamos suas informações com nenhuma outra empresa.
         </p>
 
         <h2>8. Segurança e retenção</h2>

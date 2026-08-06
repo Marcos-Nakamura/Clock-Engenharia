@@ -6,7 +6,9 @@
    Fluxo:
    - Enquanto o visitante não escolher, o Consent Mode fica "denied" (padrão
      definido no <head>) e o banner é exibido.
-   - "Aceitar"  → analytics_storage = granted  (o GA4 passa a coletar).
+   - "Aceitar"  → analytics_storage + ad_storage + ad_user_data +
+                  ad_personalization = granted (GA4 coleta e o Google Ads
+                  passa a medir conversão e fazer remarketing).
    - "Recusar"  → mantém tudo denied.
    - A escolha fica salva em localStorage e o banner não reaparece.
 ═══════════════════════════════════════════════════════════════════ */
@@ -15,11 +17,12 @@
 
   function updateConsent(granted) {
     if (typeof gtag !== 'function') return;
+    var value = granted ? 'granted' : 'denied';
     gtag('consent', 'update', {
-      'analytics_storage': granted ? 'granted' : 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+      'analytics_storage': value,
+      'ad_storage': value,
+      'ad_user_data': value,
+      'ad_personalization': value
     });
   }
 
@@ -38,8 +41,8 @@
     banner.innerHTML =
       '<div class="cookie-banner-inner">' +
         '<p class="cookie-banner-text">' +
-          'Usamos cookies para entender como você navega e melhorar sua ' +
-          'experiência no site. ' +
+          'Usamos cookies para entender como você navega, melhorar sua ' +
+          'experiência e medir nossas campanhas de anúncios. ' +
           '<a href="politica-de-privacidade.html#cookies">Saiba mais</a>.' +
         '</p>' +
         '<div class="cookie-banner-actions">' +
