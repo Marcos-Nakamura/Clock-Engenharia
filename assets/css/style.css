@@ -972,9 +972,28 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 
 .contato-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: auto 1fr 1fr auto;
   gap: 3rem;
   align-items: start;
+}
+
+.contato-col-map {
+  width: 280px;
+  max-width: 100%;
+}
+.contato-col-map iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  display: block;
+}
+.contato-map-endereco {
+  margin-top: 0.75rem;
+  color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .contato-col-logo img {
@@ -1156,6 +1175,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   .servicos-header { align-items: flex-start; }
   .btn-leiamais { width: 100%; margin-top: 1.5rem; }
   .contato-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .contato-col-map { width: 100%; }
   .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; }
   .footer-sep { display: none; }
 
