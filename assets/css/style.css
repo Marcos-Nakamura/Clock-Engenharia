@@ -40,7 +40,7 @@
   --shadow-accent: 0 10px 30px rgba(253,203,10,0.35);
   --transition: 0.25s ease;
 
-  --header-h: 104px;
+  --header-h: 124px;
 }
 
 html {
@@ -185,7 +185,7 @@ body:not(.page-home) #site-header {
 }
 
 .site-logo img {
-  height: calc(var(--header-h) * 1.3);
+  height: calc(var(--header-h) - 12px);
   width: auto;
   display: block;
   border-radius: 12px;
@@ -365,6 +365,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.65rem;
   width: 421px;
   max-width: 100%;
   height: 68px;
@@ -550,6 +551,10 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   margin-bottom: 0;
 }
 
+.sobre-text .btn {
+  margin-top: 2.25rem;
+}
+
 /* --- Serviços --- */
 .servicos-section {
   background: var(--clock-light);
@@ -638,6 +643,55 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 /* O resumo de Diferenciais reaproveita o layout de Serviços, mas mantém
    o título em amarelo/dourado como era na seção original. */
 .diferenciais-summary .section-title { color: var(--clock-accent); }
+
+/* --- Nossos Clientes (prova social / logos) --- */
+.clientes-section {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+/* Grid de colunas iguais: quebra sempre proporcional (4 numa linha,
+   2x2 quando aperta) — nunca um órfão sozinho como no flex-wrap. */
+.clientes-grid {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 2.75rem 3rem;
+}
+
+.cliente-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Todas na mesma escala óptica (max-height igual + object-fit: contain). */
+.cliente-logo {
+  max-height: 102px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+/* Logos cuja arte tem muita margem interna (ex.: Bom Samaritano)
+   ganham um reforço para ficarem opticamente do mesmo tamanho. */
+.cliente-logo--lg {
+  max-height: 134px;
+}
+
+.cliente-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
 
 /* --- Galeria (seção) --- */
 .galeria-section {
@@ -1104,7 +1158,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
 }
 
 @media (max-width: 768px) {
-  :root { --header-h: 80px; }
+  :root { --header-h: 92px; }
   section { padding: 3.5rem 0; }
 
   .main-nav { display: none; }
@@ -1163,7 +1217,8 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   .hero-section { height: 100vh; min-height: 520px; }
   .hero-title { font-size: 36px; line-height: 50.4px; }
   .hero-title span { white-space: normal; }
-  .hero-btn { width: 132px; height: 50px; font-size: 1rem; }
+  .hero-btn { width: auto; padding: 0 1.6rem; height: 52px; font-size: 1rem; }
+  .hero-btn svg { width: 19px; height: 19px; }
   .diferencial-grid,
   .diferencial-grid--reverse {
     grid-template-columns: 1fr;
@@ -1172,6 +1227,9 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   .sobre-bg { background-attachment: scroll; }
   .sobre-text .section-title { font-size: 2rem; }
   .servicos-grid { grid-template-columns: 1fr; }
+  .clientes-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.5rem; }
+  .cliente-logo { max-height: 80px; }
+  .cliente-logo--lg { max-height: 106px; }
   .servicos-header { align-items: flex-start; }
   .btn-leiamais { width: 100%; margin-top: 1.5rem; }
   .contato-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -1189,7 +1247,7 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   .whatsapp-float { right: 1rem; bottom: 1rem; width: 64px; height: 64px; }
   .whatsapp-float svg { width: 40px; height: 40px; }
 
-  .site-logo img { height: calc(var(--header-h) * 1.3); }
+  .site-logo img { height: calc(var(--header-h) - 12px); }
 }
 
 @media (max-width: 480px) {
