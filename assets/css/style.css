@@ -40,7 +40,7 @@
   --shadow-accent: 0 10px 30px rgba(253,203,10,0.35);
   --transition: 0.25s ease;
 
-  --header-h: 124px;
+  --header-h: 104px;
 }
 
 html {
@@ -500,6 +500,48 @@ body:not(.page-home) .main-nav a.nav-cta:hover {
   background-position: center;
   background-repeat: no-repeat;
   will-change: transform;
+}
+
+/* --- Foto + legenda do fundador (pagina Quem Somos) --- */
+#quem-sou {
+  min-height: calc(100vh - var(--header-h));
+}
+#quem-sou .diferencial-grid {
+  min-height: calc(100vh - var(--header-h));
+}
+#quem-sou .diferencial-text {
+  padding-left: 2.5rem;                                        /* aproxima o texto da foto */
+  padding-right: max(2rem, calc((100vw - 1440px) / 2 + 2rem)); /* texto mais largo, alinhado a um container maior */
+}
+.quem-media {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 0;
+  padding: 3rem 2rem;
+}
+.quem-foto {
+  width: 92%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+.quem-legenda {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--clock-primary);
+}
+.quem-legenda span {
+  display: block;
+  margin-top: 0.15rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--clock-blue-vivid);
 }
 
 /* --- Quem Somos --- */
